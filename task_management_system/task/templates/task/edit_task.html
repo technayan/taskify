@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Task{% endblock title %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h3 class="text-center my-4">Edit Task</h3>
+
+<form method="POST" class="mb-5 w-50 mx-auto">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <input type="submit" value="Done" class="btn btn-primary">
+</form>
+{% endblock content %}
